@@ -1,0 +1,1 @@
+json.partial! "pt_profiles/pt_profile", pt_profile: @pt_profile

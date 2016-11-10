@@ -1,0 +1,2 @@
+class PtProfile < ApplicationRecord
+end

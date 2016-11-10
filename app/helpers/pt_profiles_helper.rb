@@ -1,0 +1,2 @@
+module PtProfilesHelper
+end

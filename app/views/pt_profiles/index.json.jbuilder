@@ -1,0 +1,1 @@
+json.array! @pt_profiles, partial: 'pt_profiles/pt_profile', as: :pt_profile

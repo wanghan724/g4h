@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @pt_profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @pt_profile.last_name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @pt_profile.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @pt_profile.gender %>
+</p>
+
+<p>
+  <strong>Qualifications:</strong>
+  <%= @pt_profile.qualifications %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @pt_profile.email %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @pt_profile.contact_number %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @pt_profile.about %>
+</p>
+
+<%= link_to 'Edit', edit_pt_profile_path(@pt_profile) %> |
+<%= link_to 'Back', pt_profiles_path %>
