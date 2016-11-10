@@ -1,0 +1,1 @@
+json.partial! "v_owner_profiles/v_owner_profile", v_owner_profile: @v_owner_profile

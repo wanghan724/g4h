@@ -1,0 +1,1 @@
+json.array! @v_owner_profiles, partial: 'v_owner_profiles/v_owner_profile', as: :v_owner_profile

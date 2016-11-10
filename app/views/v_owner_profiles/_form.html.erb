@@ -1,0 +1,42 @@
+<%= form_for(v_owner_profile) do |f| %>
+  <% if v_owner_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(v_owner_profile.errors.count, "error") %> prohibited this v_owner_profile from being saved:</h2>
+
+      <ul>
+      <% v_owner_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_number %>
+    <%= f.number_field :contact_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :about %>
+    <%= f.text_field :about %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :v_owner_profiles
   resources :pt_profiles
   resources :client_profiles
   devise_for :users

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @v_owner_profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @v_owner_profile.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @v_owner_profile.email %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @v_owner_profile.contact_number %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @v_owner_profile.about %>
+</p>
+
+<%= link_to 'Edit', edit_v_owner_profile_path(@v_owner_profile) %> |
+<%= link_to 'Back', v_owner_profiles_path %>
