@@ -1,5 +1,6 @@
 class VOwnerProfilesController < ApplicationController
   before_action :set_v_owner_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /v_owner_profiles
   # GET /v_owner_profiles.json
@@ -14,7 +15,7 @@ class VOwnerProfilesController < ApplicationController
 
   # GET /v_owner_profiles/new
   def new
-    @v_owner_profile = VOwnerProfile.new
+    @v_owner_profile = current_user.v_owner_profiles.build
   end
 
   # GET /v_owner_profiles/1/edit
@@ -24,11 +25,11 @@ class VOwnerProfilesController < ApplicationController
   # POST /v_owner_profiles
   # POST /v_owner_profiles.json
   def create
-    @v_owner_profile = VOwnerProfile.new(v_owner_profile_params)
+    @v_owner_profile = current_user.v_owner_profiles.build(v_owner_profile_params)
 
     respond_to do |format|
       if @v_owner_profile.save
-        format.html { redirect_to @v_owner_profile, notice: 'V owner profile was successfully created.' }
+        format.html { redirect_to @v_owner_profile, notice: 'owner profile was successfully created.' }
         format.json { render :show, status: :created, location: @v_owner_profile }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class VOwnerProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @v_owner_profile.update(v_owner_profile_params)
-        format.html { redirect_to @v_owner_profile, notice: 'V owner profile was successfully updated.' }
+        format.html { redirect_to @v_owner_profile, notice: 'owner profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @v_owner_profile }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class VOwnerProfilesController < ApplicationController
   def destroy
     @v_owner_profile.destroy
     respond_to do |format|
-      format.html { redirect_to v_owner_profiles_url, notice: 'V owner profile was successfully destroyed.' }
+      format.html { redirect_to v_owner_profiles_url, notice: 'owner profile was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>V Owner Profiles</h1>
+<h1>Owner Profiles</h1>
 
 <table>
   <thead>
@@ -23,6 +23,7 @@
         <td><%= v_owner_profile.contact_number %></td>
         <td><%= v_owner_profile.about %></td>
         <td><%= link_to 'Show', v_owner_profile %></td>
+  
         <td><%= link_to 'Edit', edit_v_owner_profile_path(v_owner_profile) %></td>
         <td><%= link_to 'Destroy', v_owner_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -32,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New V Owner Profile', new_v_owner_profile_path %>
+<%= link_to 'New Owner Profile', new_v_owner_profile_path %>

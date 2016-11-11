@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110091244) do
+ActiveRecord::Schema.define(version: 20161111082348) do
+
+  create_table "client_profiles", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "age"
+    t.string   "email"
+    t.string   "address"
+    t.integer  "contact_number"
+    t.string   "photo"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "pt_profiles", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "age"
+    t.string   "gender"
+    t.string   "qualifications"
+    t.string   "email"
+    t.integer  "contact_number"
+    t.string   "about"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +52,17 @@ ActiveRecord::Schema.define(version: 20161110091244) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "v_owner_profiles", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.integer  "contact_number"
+    t.string   "about"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "user_id"
   end
 
 end
