@@ -1,0 +1,1 @@
+json.array! @listing_profiles, partial: 'listing_profiles/listing_profile', as: :listing_profile

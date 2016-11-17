@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @listing_profile.name %>
+</p>
+
+<p>
+  <strong>Photos:</strong>
+  <%= @listing_profile.photos %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @listing_profile.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing_profile.description %>
+</p>
+
+<p>
+  <strong>Amenities:</strong>
+  <%= @listing_profile.amenities %>
+</p>
+
+<p>
+  <strong>Directions and parking:</strong>
+  <%= @listing_profile.directions_and_parking %>
+</p>
+
+<p>
+  <strong>Terms and conditions:</strong>
+  <%= @listing_profile.terms_and_conditions %>
+</p>
+
+<p>
+  <strong>Number of people:</strong>
+  <%= @listing_profile.number_of_people %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @listing_profile.area %>
+</p>
+
+<p>
+  <strong>Peak price:</strong>
+  <%= @listing_profile.Peak_price %>
+</p>
+
+<p>
+  <strong>Off peak price:</strong>
+  <%= @listing_profile.off_peak_price %>
+</p>
+
+<%= link_to 'Edit', edit_listing_profile_path(@listing_profile) %> |
+<%= link_to 'Back', listing_profiles_path %>

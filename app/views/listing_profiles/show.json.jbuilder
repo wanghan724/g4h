@@ -1,0 +1,1 @@
+json.partial! "listing_profiles/listing_profile", listing_profile: @listing_profile

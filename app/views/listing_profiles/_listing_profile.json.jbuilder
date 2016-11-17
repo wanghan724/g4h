@@ -1,0 +1,2 @@
+json.extract! listing_profile, :id, :name, :photos, :address, :description, :amenities, :directions_and_parking, :terms_and_conditions, :number_of_people, :area, :Peak_price, :off_peak_price, :created_at, :updated_at
+json.url listing_profile_url(listing_profile, format: :json)

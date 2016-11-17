@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Photos</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>Amenities</th>
+      <th>Directions and parking</th>
+      <th>Terms and conditions</th>
+      <th>Number of people</th>
+      <th>Area</th>
+      <th>Peak price</th>
+      <th>Off peak price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listing_profiles.each do |listing_profile| %>
+      <tr>
+        <td><%= listing_profile.name %></td>
+        <td><%= listing_profile.photos %></td>
+        <td><%= listing_profile.address %></td>
+        <td><%= listing_profile.description %></td>
+        <td><%= listing_profile.amenities %></td>
+        <td><%= listing_profile.directions_and_parking %></td>
+        <td><%= listing_profile.terms_and_conditions %></td>
+        <td><%= listing_profile.number_of_people %></td>
+        <td><%= listing_profile.area %></td>
+        <td><%= listing_profile.Peak_price %></td>
+        <td><%= listing_profile.off_peak_price %></td>
+        <td><%= link_to 'Show', listing_profile %></td>
+        <td><%= link_to 'Edit', edit_listing_profile_path(listing_profile) %></td>
+        <td><%= link_to 'Destroy', listing_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listing Profile', new_listing_profile_path %>
